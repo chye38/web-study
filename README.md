@@ -6,7 +6,7 @@
 ---
 
 ## 🔗 과제 링크
-[Todo-List Resume 과제 바로가기](https://nhnent.dooray.com/share/pages/65vZz-FoQL-orM-uc8fyWQ#%EA%B3%BC%EC%A0%9C)
+[Todo-List Resume 과제 바로가기](https://github.com/nhnacademy-bootcamp/web-frontend/blob/main/04.%EC%8B%A4%EC%8A%B5/03.Todo/index.adoc)
 
 ---
 
