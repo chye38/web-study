@@ -1,0 +1,64 @@
+body{
+    overflow: auto;
+    padding-left: 30px;
+}
+
+body ul{
+    list-style-type: none;
+    padding: 0;
+}
+body ul li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+button{
+    background-color: #fff;
+    border: 1px lightgray solid;
+    height: 50px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+li .button_width{
+    width: 80px;
+    font-size: 18px;
+}
+
+li .button_today{
+    width: 60px;
+    font-size: 18px;
+}
+
+.container{
+    margin-top: 50px;
+    overflow: auto;
+}
+
+#todo{
+    content-visibility: auto;
+}
+
+.todoItem{
+    width: 1000px;
+    border: 1px lightgray solid;
+    height: 300px;
+    display: flex;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.todoDay, .todoForm{
+    flex: 3;
+    border-right: 1px solid lightgray;
+}
+
+.todoList{
+    flex: 4;
+}
+
+.todoDay, .todoList{
+    align-content: center;
+}
