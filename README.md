@@ -6,8 +6,9 @@
 ---
 
 ## 🔗 과제 링크
-- 요구사항 중 **optional / 1단계 / 3단계**는 구현하지 않고 제출하시면 됩니다 
-👉 [Todo-List Resume 과제 바로가기](https://github.com/nhnacademy-bootcamp/web-frontend/blob/main/04.%EC%8B%A4%EC%8A%B5/03.Todo/index.adoc)
+- 요구사항 중 **optional / 1단계 / 3단계**는 구현하지 않고 제출하시면 됩니다 .
+- 
+[Todo-List Resume 과제 바로가기](https://github.com/nhnacademy-bootcamp/web-frontend/blob/main/04.%EC%8B%A4%EC%8A%B5/03.Todo/index.adoc)
 
 ---
 
