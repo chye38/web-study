@@ -3,16 +3,19 @@ body{
     padding-left: 30px;
 }
 
-body ul{
+
+.navigator {
     list-style-type: none;
     padding: 0;
 }
-body ul li{
+
+.navigator li{
     display: inline-block;
     margin-right: 30px;
+    width: 80px;
 }
 
-button{
+ul li button{
     background-color: #fff;
     border: 1px lightgray solid;
     height: 50px;
@@ -42,23 +45,27 @@ li .button_today{
 }
 
 .todoItem{
+    display: flex;
     width: 1000px;
     border: 1px lightgray solid;
     height: 300px;
-    display: flex;
     margin-top: 30px;
     text-align: center;
 }
 
+.todoDay, .todoForm, .todoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-right: 1px lightgray solid;
+}
+
 .todoDay, .todoForm{
     flex: 3;
-    border-right: 1px solid lightgray;
 }
 
 .todoList{
     flex: 4;
-}
-
-.todoDay, .todoList{
-    align-content: center;
 }
