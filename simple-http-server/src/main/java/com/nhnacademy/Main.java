@@ -1,6 +1,6 @@
 package com.nhnacademy;
 
-import com.nhnacademy.httpServer.util.SimpleHttpServer;
+import com.nhnacademy.httpServer.server.SimpleHttpServer;
 
 public class Main {
     public static void main(String[] args) {
