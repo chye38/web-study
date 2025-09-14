@@ -1,0 +1,71 @@
+body{
+    overflow: auto;
+    padding-left: 30px;
+}
+
+
+.navigator {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigator li{
+    display: inline-block;
+    margin-right: 30px;
+    width: 80px;
+}
+
+ul li button{
+    background-color: #fff;
+    border: 1px lightgray solid;
+    height: 50px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+li .button_width{
+    width: 80px;
+    font-size: 18px;
+}
+
+li .button_today{
+    width: 60px;
+    font-size: 18px;
+}
+
+.container{
+    margin-top: 50px;
+    overflow: auto;
+}
+
+#todo{
+    content-visibility: auto;
+}
+
+.todoItem{
+    display: flex;
+    width: 1000px;
+    border: 1px lightgray solid;
+    height: 300px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.todoDay, .todoForm, .todoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-right: 1px lightgray solid;
+}
+
+.todoDay, .todoForm{
+    flex: 3;
+}
+
+.todoList{
+    flex: 4;
+}

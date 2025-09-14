@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="/css/todos.css">
+    <script src="/js/navigator.js" defer></script>
+    <script src="/js/todolist.js" defer></script>
+</head>
+<body>
+<ul class="navigator">
+    <li><button class="button_width" id="prevMonthBtn" >&lt;&lt;이전</button></li>
+    <li><div id="printDate">temp</div></li>
+    <li><button class="button_width" id="nextMonthBtn">다음&gt;&gt;</button></li>
+    <li><button class="button_today" id="currentMonthBtn">오늘</button></li>
+</ul>
+<form action="/logout" method="get">
+    <button type="submit">로그아웃</button>
+</form>
+
+<div class="container" id="todoDays"></div>
+</body>
+</html>

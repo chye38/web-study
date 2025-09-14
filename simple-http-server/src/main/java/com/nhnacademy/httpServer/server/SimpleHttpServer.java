@@ -1,5 +1,6 @@
 package com.nhnacademy.httpServer.server;
 
+import com.nhnacademy.httpServer.router.Router;
 import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -20,6 +21,7 @@ public class SimpleHttpServer {
 
         try {
             httpServer = HttpServer.create(new InetSocketAddress(port), 0);
+            Router router = new Router(httpServer);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
