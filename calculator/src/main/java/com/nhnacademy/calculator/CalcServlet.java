@@ -23,6 +23,7 @@ public class CalcServlet extends HttpServlet {
         String strOp = Operator.opToString(op);
         LocalTime time = LocalTime.now();
 
+
         ValueList value = new ValueList(sum, time);
         Storage.addStorage(value);
         Queue<ValueList> list = Storage.getStorage();
