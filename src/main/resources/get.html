@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GET -> httpbin.org</title>
+</head>
+
+<body>
+<form method="get" action="http://httpbin.org/get">
+    <input type="text" name="userId"  placeholder="user Id" required /> <br/>
+    <input type="text" name="userPassword" placeholder="user password" required /> <br/>
+    <input type="submit" />
+</form>
+</body>
+
+</html>
+{
+"args": {
+"userId": "marco",
+"userPassword": "1234"
+},
+"headers": {
+"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+"Accept-Encoding": "gzip, deflate",
+"Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+"Host": "httpbin.org",
+"Referer": "http://localhost:8080/",
+"Upgrade-Insecure-Requests": "1",
+"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+"X-Amzn-Trace-Id": "Root=1-63e32638-3630f7325be5d45125a28ff1"
+},
+"origin": "117.16.21.235",
+"url": "http://httpbin.org/get?userId=marco&userPassword=1234"
+}
