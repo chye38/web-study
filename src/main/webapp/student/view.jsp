@@ -41,7 +41,7 @@
         </tr>
         <tr>
             <th>등록일</th>
-            <td>${student.dateTime}</td>
+            <td>${student.dateTimeFormatted}</td>
         </tr>
         </tbody>
     </table>

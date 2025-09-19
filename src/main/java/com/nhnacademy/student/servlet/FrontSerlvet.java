@@ -1,10 +1,9 @@
 package com.nhnacademy.student.servlet;
 
-import static com.nhnacademy.student.util.RequestDispatcher.*;
+//import static com.nhnacademy.student.util.RequestDispatcher.*;
 
 import com.nhnacademy.student.controller.Command;
 import com.nhnacademy.student.controller.ControllerFactory;
-import com.nhnacademy.student.controller.ErrorController;
 import com.nhnacademy.student.controller.StudentDeleteController;
 import com.nhnacademy.student.controller.StudentListController;
 import com.nhnacademy.student.controller.StudentRegisterController;
@@ -13,6 +12,7 @@ import com.nhnacademy.student.controller.StudentUpdateController;
 import com.nhnacademy.student.controller.StudentUpdateFormController;
 import com.nhnacademy.student.controller.StudentViewController;
 import jakarta.servlet.RequestDispatcher;
+import static jakarta.servlet.RequestDispatcher.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -39,7 +39,7 @@ public class FrontSerlvet extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html");
 
-        try {
+
             //todo 실제 로직을 처리할 Command(Controller) 결정, String view = command.execute() ...
             log.info("path : {}", req.getServletPath());
             Command command = (Command) controllerFactory.getBean(req.getMethod(), req.getServletPath());
@@ -55,17 +55,7 @@ public class FrontSerlvet extends HttpServlet {
                 RequestDispatcher rd = req.getRequestDispatcher(view);
                 rd.include(req, resp);
             }
-        }catch (Exception ex){
-            //공통 error 처리
-            req.setAttribute("status_code", req.getAttribute(ERROR_STATUS_CODE));
-            req.setAttribute("exception_type", req.getAttribute(ERROR_EXCEPTION_TYPE));
-            req.setAttribute("message", req.getAttribute(ERROR_MESSAGE));
-            req.setAttribute("exception", req.getAttribute(ERROR_EXCEPTION));
-            req.setAttribute("request_uri", req.getAttribute(ERROR_REQUEST_URI));
-            log.error("status_code:{}", req.getAttribute(ERROR_STATUS_CODE));
-            RequestDispatcher rd = req.getRequestDispatcher("/error.jsp");
-            rd.forward(req,resp);
-        }
+
 
     }
 
@@ -86,7 +76,7 @@ public class FrontSerlvet extends HttpServlet {
         }else if("/student/update.do".equals(servletPath) && "POST".equalsIgnoreCase(method) ){
             command = new StudentUpdateController();
         }else if("/error.do".equals(servletPath)){
-            command = new ErrorController();
+            //command = new ErrorController();
         }
         //todo resolveCommand 수정 http-method를 고려
 

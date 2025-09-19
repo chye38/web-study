@@ -2,6 +2,8 @@ package com.nhnacademy.student.controller;
 
 import com.nhnacademy.student.domain.Student;
 import com.nhnacademy.student.repository.StudentRepository;
+import com.nhnacademy.student.service.StudentService;
+import com.nhnacademy.student.service.StudentServiceImpl;
 import com.nhnacademy.student.util.RequestMapping;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,9 +13,9 @@ import java.util.List;
 public class StudentListController implements Command{
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp){
-        StudentRepository studentRepository = (StudentRepository) req.getServletContext().getAttribute("studentRepository");
+        StudentService studentService = new StudentServiceImpl(req);
 
-        List<Student> studentList = studentRepository.getStudents();
+        List<Student> studentList = studentService.getStudentList();
         req.setAttribute("studentList", studentList);
         return "/student/list.jsp";
     }

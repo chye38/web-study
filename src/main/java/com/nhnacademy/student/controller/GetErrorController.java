@@ -1,18 +1,12 @@
 package com.nhnacademy.student.controller;
 
-import static com.nhnacademy.student.util.RequestDispatcher.ERROR_EXCEPTION;
-import static com.nhnacademy.student.util.RequestDispatcher.ERROR_EXCEPTION_TYPE;
-import static com.nhnacademy.student.util.RequestDispatcher.ERROR_MESSAGE;
-import static com.nhnacademy.student.util.RequestDispatcher.ERROR_REQUEST_URI;
-import static com.nhnacademy.student.util.RequestDispatcher.ERROR_STATUS_CODE;
-
 import com.nhnacademy.student.util.RequestMapping;
-import jakarta.servlet.RequestDispatcher;
+import static jakarta.servlet.RequestDispatcher.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @RequestMapping(value = "/error.do", method = RequestMapping.Method.GET)
-public class ErrorController implements Command{
+public class GetErrorController implements Command{
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp){
         req.setAttribute("status_code", req.getAttribute(ERROR_STATUS_CODE));

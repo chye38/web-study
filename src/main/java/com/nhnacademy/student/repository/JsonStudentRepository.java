@@ -101,7 +101,7 @@ public class JsonStudentRepository implements StudentRepository {
 
             if(student.getId().equals(id)){
                 students.remove(i);
-                return;
+                break;
             }
         }
 

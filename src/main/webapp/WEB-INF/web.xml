@@ -7,12 +7,12 @@
     <!-- 404 -> /error  설정 -->
     <error-page>
         <error-code>404</error-code>
-        <location>/error</location>
+        <location>/error.do</location>
     </error-page>
 
     <!-- todo java.lang.Exception 발생시 -> /error 설정 -->
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
-        <location>/error</location>
+        <location>/error.do</location>
     </error-page>
 </web-app>
