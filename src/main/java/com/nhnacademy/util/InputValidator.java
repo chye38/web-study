@@ -50,7 +50,7 @@ public class InputValidator {
 
     public static <T extends Enum<T>> T getEnumInput(Scanner sc, Class<T> enumClass){
         T[] enumValues = enumClass.getEnumConstants();
-        System.out.print("결과를 선택해주세요");
+        System.out.print("결과를 선택해주세요\n");
 
         for (int i = 1; i <= enumValues.length; i++) {
             System.out.printf("%d. %s\n", i, enumValues[i - 1]);
