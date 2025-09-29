@@ -6,6 +6,9 @@ import com.nhnacademy.jdbc.bank.exception.AccountNotFoundException;
 import com.nhnacademy.jdbc.bank.exception.BalanceNotEnoughException;
 import com.nhnacademy.jdbc.bank.repository.impl.AccountRepositoryImpl;
 import com.nhnacademy.jdbc.bank.service.impl.BankServiceImpl;
+import com.nhnacademy.jdbc.util.DbUtils;
+import java.sql.Connection;
+import java.sql.SQLException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,14 +27,15 @@ import static org.mockito.ArgumentMatchers.anyLong;
 @ExtendWith(MockitoExtension.class)
 class BankServiceTest {
     //todo#18 BankServiceTest를 실행하고, Test Case가 통과할 수 있도록 BankServiceImpl 서비스를 수정합니다.
-
+    Connection connection;
     @Mock
     AccountRepositoryImpl accountRepository;
 
     BankService bankService;
 
     @BeforeEach
-    void setUp() {
+    void setUp() throws SQLException {
+        connection = DbUtils.getDataSource().getConnection();
         bankService = new BankServiceImpl(accountRepository);
     }
 
@@ -42,7 +46,7 @@ class BankServiceTest {
         long accountNumber=8000l;
 
         Mockito.when(accountRepository.findByAccountNumber(any(), anyLong())).thenReturn(Optional.of(new Account(8000l, "nhn아카데미-8000", 10_0000l)));
-        Account account = bankService.getAccount(null,accountNumber);
+        Account account = bankService.getAccount(connection,accountNumber);
 
         Assertions.assertAll(
                 ()->Assertions.assertEquals(8000l, account.getAccountNumber()),
@@ -58,7 +62,7 @@ class BankServiceTest {
         long accountNumber = 8000l;
         Mockito.when(accountRepository.findByAccountNumber(any(), anyLong())).thenThrow(AccountNotFoundException.class);
         Assertions.assertThrows(RuntimeException.class, ()->{
-            bankService.getAccount(null, accountNumber);
+            bankService.getAccount(connection, accountNumber);
         });
     }
 
@@ -69,8 +73,8 @@ class BankServiceTest {
     void saveAccount() {
         Account account = new Account(Long.MAX_VALUE,"nhn아카데미",Long.MAX_VALUE);
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(0);
-        Mockito.when(accountRepository.save(null,account)).thenReturn(1);
-        bankService.createAccount(null,account);
+        Mockito.when(accountRepository.save(connection,account)).thenReturn(1);
+        bankService.createAccount(connection,account);
         Mockito.verify(accountRepository,Mockito.times(1)).save(any(),any());
     }
 
@@ -80,7 +84,7 @@ class BankServiceTest {
     void saveAccount_duplicate_accountNumber() {
         Account account = new Account(Long.MAX_VALUE,"nhn아카데미",Long.MAX_VALUE);
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(1);
-        Assertions.assertThrows(AccountAreadyExistException.class,()->bankService.createAccount(null,account));
+        Assertions.assertThrows(AccountAreadyExistException.class,()->bankService.createAccount(connection,account));
     }
 
     @Test
@@ -90,7 +94,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.deposit(any(),anyLong(),anyLong())).thenReturn(1);
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(1);
 
-        boolean result = bankService.depositAccount(null,Long.MAX_VALUE,Long.MAX_VALUE);
+        boolean result = bankService.depositAccount(connection,Long.MAX_VALUE,Long.MAX_VALUE);
 
         assertTrue(result);
         Mockito.verify(accountRepository,Mockito.times(1)).deposit(any(),anyLong(),anyLong());
@@ -102,7 +106,7 @@ class BankServiceTest {
     void deposit_account_not_found() {
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(0);
 
-        assertThrows(AccountNotFoundException.class,()-> bankService.depositAccount(null,Long.MAX_VALUE,Long.MAX_VALUE));
+        assertThrows(AccountNotFoundException.class,()-> bankService.depositAccount(connection,Long.MAX_VALUE,Long.MAX_VALUE));
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
     }
 
@@ -114,7 +118,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.findByAccountNumber(any(),anyLong())).thenReturn(Optional.of(new Account(1l,"nhn아카데미",10_0000l)));
         Mockito.when(accountRepository.withdraw(any(),anyLong(),anyLong())).thenReturn(1);
 
-        boolean result = bankService.withdrawAccount(null,Long.MAX_VALUE,1_0000);
+        boolean result = bankService.withdrawAccount(connection,Long.MAX_VALUE,1_0000);
         assertEquals(true,result);
     }
 
@@ -124,7 +128,7 @@ class BankServiceTest {
     void withdraw_account_not_found(){
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(0);
 
-        assertThrows(AccountNotFoundException.class,()->bankService.withdrawAccount(null,Long.MAX_VALUE,Long.MAX_VALUE));
+        assertThrows(AccountNotFoundException.class,()->bankService.withdrawAccount(connection,Long.MAX_VALUE,Long.MAX_VALUE));
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
     }
 
@@ -135,7 +139,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(1);
         Mockito.when(accountRepository.findByAccountNumber(any(),anyLong())).thenReturn(Optional.of(new Account(1l,"nhn아카데미",10_0000l)));
 
-        Assertions.assertThrows(BalanceNotEnoughException.class,()-> bankService.withdrawAccount(null,1l, 20_0000l));
+        Assertions.assertThrows(BalanceNotEnoughException.class,()-> bankService.withdrawAccount(connection,1l, 20_0000l));
         Mockito.verify(accountRepository,Mockito.times(1)).findByAccountNumber(any(),anyLong());
     }
 
@@ -149,7 +153,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.withdraw(any(),anyLong(),anyLong())).thenReturn(1);
         Mockito.when(accountRepository.deposit(any(),anyLong(),anyLong())).thenReturn(1);
 
-        bankService.transferAmount(null,8000l,9000l,1_0000l);
+        bankService.transferAmount(connection,8000l,9000l,1_0000l);
 
         Mockito.verify(accountRepository,Mockito.times(2)).findByAccountNumber(any(),anyLong());
         Mockito.verify(accountRepository,Mockito.times(2)).countByAccountNumber(any(),anyLong());
@@ -162,7 +166,7 @@ class BankServiceTest {
     @DisplayName("계좌이체 - 계좌가 존재하지 않느다면")
     void accountTransfer_account_not_found(){
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(0);
-        Assertions.assertThrows(AccountNotFoundException.class, ()->bankService.transferAmount(null,8000l,9000l,1_0000l));
+        Assertions.assertThrows(AccountNotFoundException.class, ()->bankService.transferAmount(connection,8000l,9000l,1_0000l));
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
     }
 
@@ -174,7 +178,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.findByAccountNumber(any(),anyLong())).thenReturn(Optional.of(new Account(8000l, "nhn아카데미", 10_0000l)));
 
         Assertions.assertThrows(BalanceNotEnoughException.class,()->{
-            bankService.transferAmount(null,8000l,9000l,20_0000l);
+            bankService.transferAmount(connection,8000l,9000l,20_0000l);
         });
 
         Mockito.verify(accountRepository,Mockito.times(2)).findByAccountNumber(any(),anyLong());
@@ -189,7 +193,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(1);
         Mockito.when(accountRepository.deleteByAccountNumber(any(),anyLong())).thenReturn(1);
 
-        bankService.dropAccount(null,Long.MAX_VALUE);
+        bankService.dropAccount(connection,Long.MAX_VALUE);
 
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
         Mockito.verify(accountRepository,Mockito.times(1)).deleteByAccountNumber(any(),anyLong());
@@ -203,7 +207,7 @@ class BankServiceTest {
     void dropAccount_account_not_found(){
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(0);
         Assertions.assertThrows(AccountNotFoundException.class,()->{
-            bankService.dropAccount(null,Long.MAX_VALUE);
+            bankService.dropAccount(connection,Long.MAX_VALUE);
         });
 
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
@@ -217,7 +221,7 @@ class BankServiceTest {
         Mockito.when(accountRepository.countByAccountNumber(any(),anyLong())).thenReturn(1);
         Mockito.when(accountRepository.deleteByAccountNumber(any(),anyLong())).thenReturn(0);
         Assertions.assertThrows(RuntimeException.class,()->{
-            bankService.dropAccount(null,Long.MAX_VALUE);
+            bankService.dropAccount(connection,Long.MAX_VALUE);
         });
 
         Mockito.verify(accountRepository,Mockito.times(1)).countByAccountNumber(any(),anyLong());
