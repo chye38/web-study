@@ -94,10 +94,13 @@ class UserServiceImplTest {
     void doLogin() {
         Mockito.when(userRepository.findByUserIdAndUserPassword(anyString(),anyString())).thenReturn(Optional.ofNullable(testUser));
         Mockito.when(userRepository.updateLatestLoginAtByUserId(anyString(),any())).thenReturn(1);
+        // user Id 체크 후에 비밀번호 체크하는 흐름이 더 좋아보임
+        Mockito.when(userRepository.countByUserId(anyString())).thenReturn(1);
 
         User user = userService.doLogin(testUser.getUserId(), testUser.getUserPassword());
 
         Assertions.assertEquals(testUser,user);
+        Mockito.verify(userRepository,Mockito.times(1)).countByUserId(anyString());
         Mockito.verify(userRepository,Mockito.times(1)).findByUserIdAndUserPassword(anyString(),anyString());
         Mockito.verify(userRepository,Mockito.times(1)).updateLatestLoginAtByUserId(anyString(),any());
     }
@@ -105,8 +108,11 @@ class UserServiceImplTest {
     @Test
     @DisplayName("login fail")
     void doLogin_fail(){
+        // 여기도 동일하게 ID부터 체크
+        Mockito.when(userRepository.countByUserId(anyString())).thenReturn(1);
         Mockito.when(userRepository.findByUserIdAndUserPassword(anyString(),anyString())).thenReturn(Optional.empty());
         Assertions.assertThrows(UserNotFoundException.class,()->userService.doLogin(testUser.getUserId(), testUser.getUserPassword()));
+        Mockito.verify(userRepository,Mockito.times(1)).countByUserId(anyString());
         Mockito.verify(userRepository,Mockito.times(1)).findByUserIdAndUserPassword(anyString(),anyString());
     }
 
