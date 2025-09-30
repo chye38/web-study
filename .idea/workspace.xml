@@ -2,14 +2,31 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="student:war exploded" />
+      <artifact name="shoppingmall:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="" />
+    <list default="true" id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/CharacterEncodingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/WelcomePageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/WelcomePageFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/initialize/PointThreadInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/initialize/PointThreadInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/listener/ApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/listener/ApplicationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/thread/channel/RequestChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/thread/channel/RequestChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +87,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat 서버.Tomcat 10.1.31.executor": "Run",
+    "git-widget-placeholder": "shoppingmall",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/chye/Desktop/NHNacademy/homework/project",
     "node.js.detected.package.eslint": "true",
@@ -98,7 +116,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceImplTest">
+  <component name="RunManager" selected="Tomcat 서버.Tomcat 10.1.31">
     <configuration name="DbUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shoppingmall" />
       <extension name="coverage">
@@ -155,6 +173,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.nhnacademy.shoppingmall.check.user.service.impl" />
       <option name="MAIN_CLASS_NAME" value="com.nhnacademy.shoppingmall.check.user.service.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,7 +182,7 @@
     <configuration name="Tomcat 10.1.31" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.31" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="temurin-21" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="student:war exploded">
+        <artifact name="shoppingmall:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -243,10 +262,17 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="student:war exploded" />
+          <artifact name="shoppingmall:war exploded" />
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.DbUtilsTest" />
+      <item itemvalue="JUnit.UserRepositoryImplTest" />
+      <item itemvalue="JUnit.UserRepositoryImplTest.findByUserIdAndUserPassword" />
+      <item itemvalue="JUnit.UserServiceImplTest" />
+      <item itemvalue="Tomcat 서버.Tomcat 10.1.31" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserServiceImplTest" />
@@ -264,6 +290,9 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="JSP" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
       <changelist id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="" />
@@ -276,7 +305,8 @@
       <workItem from="1758955519479" duration="32358000" />
       <workItem from="1759007905600" duration="316000" />
       <workItem from="1759008349182" duration="103000" />
-      <workItem from="1759151502519" duration="12931000" />
+      <workItem from="1759151502519" duration="13154000" />
+      <workItem from="1759228086064" duration="9622000" />
     </task>
     <servers />
   </component>

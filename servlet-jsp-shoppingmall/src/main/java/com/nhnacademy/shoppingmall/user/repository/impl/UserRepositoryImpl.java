@@ -169,10 +169,13 @@ public class UserRepositoryImpl implements UserRepository {
         try(PreparedStatement pstmt = connection.prepareStatement(sql);){
             pstmt.setString(1, userId);
             try(ResultSet rs = pstmt.executeQuery();){
-                return rs.getInt("count");
+                if(rs.next()){
+                    return rs.getInt("count");
+                }
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return 0;
     }
 }

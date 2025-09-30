@@ -56,6 +56,7 @@ public class UserServiceImpl implements UserService {
         //todo#4-5 로그인 구현, userId, userPassword로 일치하는 회원 조회
         
         // userId가 존재하지않으면 exception
+        // userId가 존재하는지와 비밀번호가 틀린걸 각각 오류를 던지는 의도?
         if(userRepository.countByUserId(userId) == 0){
             throw new UserNotFoundException(userId);
         }
