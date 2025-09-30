@@ -11,7 +11,11 @@ public class CharacterEncodingFilter  implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         //todo#8 UTF-8 인코딩, initParams의 encoding parameter value값을 charset 으로 지정합니다.
         //@WebFilter(initParams = {@WebInitParam(name = "encoding",value = "UTF-8")})
-
+        String charset = servletRequest.getParameter("encoding");
+        if(charset == null || charset.isEmpty()){
+            charset = "UTF-8";
+        }
+        servletResponse.setCharacterEncoding(charset);
+        filterChain.doFilter(servletRequest, servletResponse);
     }
-
 }
