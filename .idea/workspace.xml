@@ -11,14 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/SignupPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/SignupPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypagePostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypagePostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/shop.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/mypage/mypage_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/mypage/mypage_form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +294,7 @@
       <workItem from="1759008349182" duration="103000" />
       <workItem from="1759151502519" duration="13154000" />
       <workItem from="1759228086064" duration="9861000" />
-      <workItem from="1759324811938" duration="6406000" />
+      <workItem from="1759324811938" duration="8066000" />
     </task>
     <servers />
   </component>

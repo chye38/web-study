@@ -32,6 +32,10 @@
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/index.do" class="nav-link px-2 text-secondary">Home</a></li>
                         <li><a href="/mypage.do" class="nav-link px-2 text-white">마이페이지</a></li>
+                        <!-- 관리자 전용: 상품 관리 메뉴 -->
+                        <c:if test="${not empty user and user.userAuth == 'ROLE_ADMIN'}">
+                            <li><a href="/admin/product/list.do" class="nav-link px-2 text-white">상품 관리</a></li>
+                        </c:if>
                     </ul>
 
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">

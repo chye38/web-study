@@ -27,7 +27,7 @@
                                     <a href="/product/view.do?id=${product.id}" class="btn btn-sm btn-outline-secondary">View</a>
 
                                     <!-- 관리자일 경우에만 Edit 버튼 표시 -->
-                                    <c:if test="${not empty user and user.role == 'ADMIN'}">
+                                    <c:if test="${not empty user and user.userAuth == 'ROLE_ADMIN'}">
                                         <a href="/product/edit.do?id=${product.id}" class="btn btn-sm btn-outline-warning">Edit</a>
                                     </c:if>
                                 </div>
