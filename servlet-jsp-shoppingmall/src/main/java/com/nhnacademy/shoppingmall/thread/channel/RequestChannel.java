@@ -30,7 +30,7 @@ public class RequestChannel {
     public synchronized void addRequest(ChannelRequest request) throws InterruptedException {
 
         //todo#14-5 queue가 가득차있다면 요청이 소비될 때까지 대기합니다.
-        if(queue.size() >= queueMaxSize){
+        while(queue.size() >= queueMaxSize){
             wait();
         }
 

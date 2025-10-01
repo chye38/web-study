@@ -20,6 +20,5 @@ public class PointThreadInitializer implements ServletContainerInitializer {
         //todo#14-2 WorkerThread 사작합니다.
         WorkerThread workerThread = new WorkerThread(requestChannel);
         workerThread.start();
-
     }
 }

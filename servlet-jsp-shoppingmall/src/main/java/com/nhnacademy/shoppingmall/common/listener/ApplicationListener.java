@@ -48,5 +48,7 @@ public class ApplicationListener implements ServletContextListener {
                     null
             ));
         }
+
+        DbConnectionThreadLocal.reset();
     }
 }
