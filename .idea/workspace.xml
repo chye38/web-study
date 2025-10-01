@@ -10,22 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/CharacterEncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/CharacterEncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/LoginCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/WelcomePageFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/WelcomePageFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/initialize/PointThreadInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/initialize/PointThreadInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/listener/ApplicationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/listener/ApplicationListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/util/DbUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/thread/channel/RequestChannel.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/thread/channel/RequestChannel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/SignupPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/SignupPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypagePostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/mypage/MypagePostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/mypage/mypage_form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/mypage/mypage_form.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,34 +68,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.DbUtilsTest.executor": "Run",
-    "JUnit.UserRepositoryImplTest.executor": "Run",
-    "JUnit.UserRepositoryImplTest.findByUserIdAndUserPassword.executor": "Run",
-    "JUnit.UserServiceImplTest.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat 서버.Tomcat 10.1.31.executor": "Run",
-    "git-widget-placeholder": "shoppingmall",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/chye/Desktop/NHNacademy/homework/project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "아티팩트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true",
-    "애플리케이션.GameSystem.executor": "Run",
-    "애플리케이션.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.DbUtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserRepositoryImplTest.findByUserIdAndUserPassword.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat 서버.Tomcat 10.1.31.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;shoppingmall&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chye/Desktop/NHNacademy/homework/project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;아티팩트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;애플리케이션.GameSystem.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RunDashboard">
     <option name="configurationStatuses">
       <map>
@@ -306,7 +299,8 @@
       <workItem from="1759007905600" duration="316000" />
       <workItem from="1759008349182" duration="103000" />
       <workItem from="1759151502519" duration="13154000" />
-      <workItem from="1759228086064" duration="9622000" />
+      <workItem from="1759228086064" duration="9861000" />
+      <workItem from="1759324811938" duration="6406000" />
     </task>
     <servers />
   </component>

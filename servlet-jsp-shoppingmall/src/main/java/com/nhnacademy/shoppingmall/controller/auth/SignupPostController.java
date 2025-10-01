@@ -35,7 +35,6 @@ public class SignupPostController implements BaseController {
             return "redirect:/signup.do";
         }
 
-        userBirth = userBirth.replace("-", "");
         try{
             User user = new User(
                     userId,

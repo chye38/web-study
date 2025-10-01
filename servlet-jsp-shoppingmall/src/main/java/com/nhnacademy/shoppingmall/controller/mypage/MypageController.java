@@ -5,7 +5,11 @@ import com.nhnacademy.shoppingmall.common.mvc.controller.BaseController;
 import com.nhnacademy.shoppingmall.user.domain.User;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+
+import javax.swing.text.DateFormatter;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 @RequestMapping(method = RequestMapping.Method.GET, value = "/mypage.do")
@@ -17,8 +21,6 @@ public class MypageController implements BaseController {
         if(Objects.isNull(user)){
             return "redirect:/error.do";
         }
-
-        String birthStr = user.getUserBirth();
 
         req.setAttribute("user", user);
         return "shop/mypage/mypage_form";

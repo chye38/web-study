@@ -125,16 +125,14 @@ public class UserRepositoryImpl implements UserRepository {
     public int update(User user) {
         //todo#3-5 회원수정, executeUpdate()을 반환합니다.
         Connection connection = DbConnectionThreadLocal.getConnection();
-        String sql = "UPDATE Users SET UserName = ?, UserPassword = ?, UserBirth = ?, UserAuth = ?, UserPoint = ? WHERE UserId=?";
+        String sql = "UPDATE Users SET UserName = ?, UserPassword = ?, UserBirth = ? WHERE UserId = ?";
         log.debug("sql:{}",sql);
 
         try(PreparedStatement pstmt = connection.prepareStatement(sql);){
             pstmt.setString(1, user.getUserName());
             pstmt.setString(2, user.getUserPassword());
             pstmt.setString(3, user.getUserBirth());
-            pstmt.setString(4, user.getUserAuth().toString());
-            pstmt.setInt(5, user.getUserPoint());
-            pstmt.setString(6, user.getUserId());
+            pstmt.setString(4, user.getUserId());
 
             return pstmt.executeUpdate();
         }catch (SQLException e) {

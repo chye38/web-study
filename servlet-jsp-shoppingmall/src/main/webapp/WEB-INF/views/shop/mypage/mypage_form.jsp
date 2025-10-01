@@ -24,7 +24,7 @@
 
             <div class="form-floating mb-2">
                 <input type="date" name="user_birth" class="form-control" id="user_birth"
-                       <fmt:formatDate value="${user.userBirth}" pattern="yyyy-MM-dd" /> required>
+                      value="${user.userBirth}" required>
                 <label for="user_birth">생년월일</label>
             </div>
 
