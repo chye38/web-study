@@ -1,25 +1,1 @@
-package com.nhnacademy.shoppingmall.controller.index;
-
-import com.nhnacademy.shoppingmall.common.mvc.annotation.RequestMapping;
-import com.nhnacademy.shoppingmall.common.mvc.controller.BaseController;
-
-import com.nhnacademy.shoppingmall.user.domain.User;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-
-import java.util.Objects;
-
-@RequestMapping(method = RequestMapping.Method.GET,value = {"/index.do"})
-public class IndexController implements BaseController {
-    @Override
-    public String execute(HttpServletRequest req, HttpServletResponse resp) {
-
-        User user = (User) req.getSession().getAttribute("user");
-
-        if(Objects.nonNull(user)){
-            req.setAttribute("user",user);
-        }
-
-        return "shop/main/index";
-    }
-}
+package com.nhnacademy.shoppingmall.controller.index;import com.nhnacademy.shoppingmall.common.mvc.annotation.RequestMapping;import com.nhnacademy.shoppingmall.common.mvc.controller.BaseController;import com.nhnacademy.shoppingmall.user.domain.User;import jakarta.servlet.http.HttpServletRequest;import jakarta.servlet.http.HttpServletResponse;import jakarta.servlet.http.HttpSession;import java.util.Objects;@RequestMapping(method = RequestMapping.Method.GET,value = {"/index.do"})public class IndexController implements BaseController {    @Override    public String execute(HttpServletRequest req, HttpServletResponse resp) {        HttpSession session =  req.getSession(false);        User user = null;        if(Objects.nonNull(session)){            user = (User)session.getAttribute("loginUser");        }        req.setAttribute("user", user);        if(Objects.nonNull(user) && user.getUserAuth() == User.Auth.ROLE_ADMIN){            return "admin/main/index";        }        return "shop/main/index";    }}

@@ -35,6 +35,11 @@ public class LoginPostController implements BaseController {
             log.info("Create Session Success");
             log.info("session ID : {}", session.getId());
             log.info("Session loginUser : {}", session.getAttribute("loginUser"));
+
+            if(user.getUserAuth() == User.Auth.ROLE_ADMIN){
+                return "redirect:/index.do";
+            }
+
             return "redirect:/index.do";
         } catch (UserNotFoundException e){
             log.error("UserNotFoundException : {}", e.getMessage());
