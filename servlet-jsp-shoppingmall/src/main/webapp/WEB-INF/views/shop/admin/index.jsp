@@ -17,18 +17,18 @@
             <c:forEach var="product" items="${productList}">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}" style="object-fit: cover; height: 225px;"/>
+                        <img src="${product.path}" class="card-img-top" alt="${product.productName}" style="object-fit: cover; height: 225px;"/>
 
                         <div class="card-body">
-                            <p class="card-text">${product.description}</p>
+                            <p class="card-text">${product.productDescription}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <!-- 모든 유저에게 View 버튼 표시 -->
-                                    <a href="/product/view.do?id=${product.id}" class="btn btn-sm btn-outline-secondary">View</a>
+                                    <a href="/productView.do?id=${product.productId}" class="btn btn-sm btn-outline-secondary">View</a>
 
                                     <!-- 관리자일 경우에만 Edit 버튼 표시 -->
                                     <c:if test="${not empty user and user.userAuth == 'ROLE_ADMIN'}">
-                                        <a href="/product/edit.do?id=${product.id}" class="btn btn-sm btn-outline-warning">Edit</a>
+                                        <a href="/admin/productEdit.do?id=${product.productId}" class="btn btn-sm btn-outline-warning">Edit</a>
                                     </c:if>
                                 </div>
                                 <small class="text-muted">

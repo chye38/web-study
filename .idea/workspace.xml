@@ -10,16 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="264ebc33-62de-483f-8397-ea1d713ee176" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/productManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/admin/main/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/admin/productManager.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/productManager.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductAddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductAddPostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductDeleteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductUpdateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductUpdatePostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/product/ProductViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/product/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/product/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/product/repository/impl/ProductRepositroyImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/product/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/product/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/productAdd_Form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/productUpdate_Form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/product/productView.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/mvc/servlet/FrontServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/productManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/admin/ProductManagerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/shop.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/shop.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/user/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/admin/main/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/admin/productManager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/layout/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/productManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/admin/productManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/webapp/WEB-INF/views/shop/main/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servlet-jsp-shoppingmall/submit/erd/script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/servlet-jsp-shoppingmall/submit/erd/script.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +45,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,7 +105,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat 서버.Tomcat 10.1.31.executor": "Debug",
+    "Tomcat 서버.Tomcat 10.1.31.executor": "Run",
     "git-widget-placeholder": "shoppingmall",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/chye/Desktop/NHNacademy/homework/project",
@@ -310,7 +327,8 @@
       <workItem from="1759151502519" duration="13154000" />
       <workItem from="1759228086064" duration="9861000" />
       <workItem from="1759324811938" duration="10640000" />
-      <workItem from="1759660227598" duration="3815000" />
+      <workItem from="1759660227598" duration="7276000" />
+      <workItem from="1759731132248" duration="17793000" />
     </task>
     <servers />
   </component>
@@ -332,15 +350,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/index/IndexController.java</url>
-          <line>15</line>
-          <properties class="com.nhnacademy.shoppingmall.controller.index.IndexController" method="execute">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/common/filter/AdminCheckFilter.java</url>
           <line>17</line>
           <properties class="com.nhnacademy.shoppingmall.common.filter.AdminCheckFilter" method="doFilter">
@@ -348,6 +357,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/servlet-jsp-shoppingmall/src/main/java/com/nhnacademy/shoppingmall/controller/auth/LoginPostController.java</url>
+          <line>22</line>
+          <properties class="com.nhnacademy.shoppingmall.controller.auth.LoginPostController" method="execute">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

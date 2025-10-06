@@ -13,7 +13,7 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>상품 관리</h2>
         <!-- 상품 추가 버튼 -->
-        <a href="/product/add.do" class="btn btn-primary">상품 추가</a>
+        <a href="/admin/productAdd.do" class="btn btn-primary">상품 추가</a>
     </div>
 
     <c:if test="${not empty productList}">
@@ -31,21 +31,19 @@
             <tbody>
             <c:forEach var="product" items="${productList}">
                 <tr>
-                    <td>${product.id}</td>
+                    <td>${product.productId}</td>
                     <td>
-                        <a href="/product/view.do?id=${product.id}">
-                                ${product.name}
+                        <a href="/productView.do?id=${product.productId}">
+                                ${product.productName}
                         </a>
                     </td>
                     <td><fmt:formatNumber value="${product.price}" type="currency"/></td>
-                    <td>${product.description}</td>
+                    <td>${product.productDescription}</td>
+                    <td>${product.path}</td>
                     <td>
-                        <img src="${product.imageUrl}" alt="${product.name}" style="height:50px; object-fit:cover;">
-                    </td>
-                    <td>
-                        <a href="/product/edit.do?id=${product.id}" class="btn btn-sm btn-warning">수정</a>
-                        <form action="/product/delete.do" method="post" style="display:inline;">
-                            <input type="hidden" name="id" value="${product.id}" />
+                        <a href="/admin/productEdit.do?id=${product.productId}" class="btn btn-sm btn-warning">수정</a>
+                        <form action="/admin/productDelete.do" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="${product.productId}" />
                             <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('삭제하시겠습니까?');">삭제</button>
                         </form>
                     </td>
@@ -53,8 +51,20 @@
             </c:forEach>
             </tbody>
         </table>
+
+    <!-- 페이지네이션 -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center mt-4">
+            <c:forEach var="i" begin="1" end="${totalPages}">
+                <li class="page-item ${i == currentPage ? 'active' : ''}">
+                    <a class="page-link" href="?page=${i}">${i}</a>
+                </li>
+            </c:forEach>
+        </ul>
+    </nav>
     </c:if>
 
+    <!-- 상품이 없으면 안내 문구만 표시, 페이지네이션 생략 -->
     <c:if test="${empty productList}">
         <p class="text-center">등록된 상품이 없습니다.</p>
     </c:if>

@@ -23,12 +23,8 @@
 <div class="mainContainer">
     <header class="p-3 bg-dark text-white">
         <div class="container d-flex flex-wrap align-items-center justify-content-between">
-            <a href="/index.do" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <strong>SHOP ADMIN</strong>
-            </a>
-
             <ul class="nav me-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="/mypage.do" class="nav-link px-2 text-white">마이페이지</a></li>
+                <li><a href="/index.do" class="nav-link px-2 text-white">Home</a></li>
                 <c:if test="${not empty user and user.userAuth == 'ROLE_ADMIN'}">
                     <li><a href="/admin/productManager.do" class="nav-link px-2 text-white">상품 관리</a></li>
                 </c:if>
@@ -37,12 +33,12 @@
             <c:choose>
                 <c:when test="${not empty user}">
                     <div class="text-end">
-                        <form method="POST" action="/logout.do" style="display:inline;">
-                            <button type="submit" class="btn btn-outline-light me-2">로그아웃</button>
-                        </form>
                         <span class="text-white fw-bold">
                             보유 포인트: <fmt:formatNumber value="${user.userPoint}" type="number" groupingUsed="true"/>점
                         </span>
+                        <form method="POST" action="/logout.do" style="display:inline;">
+                            <button type="submit" class="btn btn-outline-light me-2">로그아웃</button>
+                        </form>
                     </div>
                 </c:when>
                 <c:otherwise>

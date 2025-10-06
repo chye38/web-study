@@ -16,8 +16,6 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
-
     // 서비스 테스트시 오류제어를 왜 안하는지?
     // 다른 테스트는 왜?
     @Override

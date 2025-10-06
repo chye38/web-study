@@ -5,6 +5,7 @@ import com.nhnacademy.shoppingmall.common.mvc.view.ViewResolver;
 import com.nhnacademy.shoppingmall.common.mvc.controller.BaseController;
 import com.nhnacademy.shoppingmall.common.mvc.controller.ControllerFactory;
 
+import jakarta.servlet.annotation.MultipartConfig;
 import lombok.extern.slf4j.Slf4j;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -16,6 +17,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
+@MultipartConfig(
+        maxFileSize = 1024 * 1024 * 10 // 예시: 최대 파일 크기 10MB
+)
 @WebServlet(name = "frontServlet",urlPatterns = {"*.do"})
 public class FrontServlet extends HttpServlet {
     private ControllerFactory controllerFactory;
