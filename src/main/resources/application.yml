@@ -1,5 +1,23 @@
+spring:
+  profiles:
+    active: eng
+---
+spring:
+  config:
+    activate:
+      on-profile: kor
+message:
+  cooking: 요리 중 (KOR)
+  delivery: 배달 중 (KOR)
+  payment: 결제 중 (KOR)
+  receive: 주문받는 중 (KOR)
+---
+spring:
+  config:
+    activate:
+      on-profile: eng
 message:
   cooking: Cooking Food (ENG)
-  delevery: Delivering Food (ENG)
+  delivery: Delivering Food (ENG)
   payment: Paying (ENG)
   receive: Receiving (ENG)
