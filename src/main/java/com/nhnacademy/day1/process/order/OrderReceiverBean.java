@@ -8,7 +8,4 @@ public class OrderReceiverBean {
     public void receiveOrder() {
         System.out.println("OrderReceiverBean : 주문 받는중");
     }
-    public void completeOrder() {
-        System.out.println("OrderReceiverBean : 주문 완료");
-    }
 }

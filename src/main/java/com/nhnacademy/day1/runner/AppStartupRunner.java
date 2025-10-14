@@ -33,8 +33,6 @@ public class AppStartupRunner implements ApplicationRunner {
 
         orderProcessorBean.processOrder();
         chefBean.cook();
-        chefBean.completeCook();
         deliveryServiceBean.deliver();
-        deliveryServiceBean.completeDeliver();
     }
 }
