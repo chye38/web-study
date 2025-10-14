@@ -1,23 +1,24 @@
 package com.nhnacademy.day1.process.order;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-@Configuration
+// 빈 생성 방식 1 (Component)
+@Component
 public class OrderProcessorBean {
-    @Bean
-    OrderReceiverBean orderReceiverBean() {
-        return new OrderReceiverBean();
+    private final OrderReceiverBean  orderReceiverBean;
+    private final PaymentProcessorBean paymentProcessorBean;
+
+    @Autowired
+    public OrderProcessorBean(OrderReceiverBean orderReceiverBean, PaymentProcessorBean paymentProcessorBean) {
+        this.orderReceiverBean = orderReceiverBean;
+        this.paymentProcessorBean = paymentProcessorBean;
     }
 
-    @Bean
-    PaymentProcessorBean paymentProcessorBean() {
-        return new PaymentProcessorBean();
-    }
-
-    public void processOrder(){
-        orderReceiverBean().receiveOrder();
-        paymentProcessorBean().processPayment();
+    public void processOrder() {
+        orderReceiverBean.receiveOrder();
+        orderReceiverBean.completeOrder();
+        paymentProcessorBean.processPayment();
+        paymentProcessorBean.completePayment();
     }
 }

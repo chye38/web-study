@@ -10,15 +10,20 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+@RequiredArgsConstructor // 의존성 주입 1 (생성자 주입)
 public class AppStartupRunner implements ApplicationRunner {
 
     private final OrderProcessorBean orderProcessorBean;
-    @Autowired
+
     private ChefBean chefBean;
+
+    @Autowired  // 의존성 주입 2 (세터 주입)
+    public void setChefBean(ChefBean chefBean) {
+        this.chefBean = chefBean;
+    }
+
+    @Autowired  // 의존성 주입 3 (필드 주입)
     private DeliveryServiceBean deliveryServiceBean;
-
-
 
 
     @Override
@@ -28,6 +33,8 @@ public class AppStartupRunner implements ApplicationRunner {
 
         orderProcessorBean.processOrder();
         chefBean.cook();
-
+        chefBean.completeCook();
+        deliveryServiceBean.deliver();
+        deliveryServiceBean.completeDeliver();
     }
 }
