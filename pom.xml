@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.nhnacademy</groupId>
-    <artifactId>day1</artifactId>
+    <artifactId>day2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>day1</name>
     <description>day1</description>
