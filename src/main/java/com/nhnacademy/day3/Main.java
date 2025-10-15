@@ -1,6 +1,6 @@
-package com.nhnacademy.day2;
+package com.nhnacademy.day3;
 
-import com.nhnacademy.day2.properties.MessageProperties;
+import com.nhnacademy.day3.properties.MessageProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

@@ -1,4 +1,4 @@
-package com.nhnacademy.day2.process.order;
+package com.nhnacademy.day3.process.order;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;

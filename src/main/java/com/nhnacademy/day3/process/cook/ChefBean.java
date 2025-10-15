@@ -1,6 +1,6 @@
-package com.nhnacademy.day2.process.cook;
+package com.nhnacademy.day3.process.cook;
 
-import com.nhnacademy.day2.properties.MessageProperties;
+import com.nhnacademy.day3.properties.MessageProperties;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

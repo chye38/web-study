@@ -1,7 +1,5 @@
-package com.nhnacademy.day2.process.order;
+package com.nhnacademy.day3.process.order;
 
-import com.nhnacademy.day2.properties.MessageProperties;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

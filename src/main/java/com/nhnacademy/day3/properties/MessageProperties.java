@@ -1,4 +1,4 @@
-package com.nhnacademy.day2.properties;
+package com.nhnacademy.day3.properties;
 
 import lombok.Getter;
 import lombok.Setter;

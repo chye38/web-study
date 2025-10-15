@@ -1,8 +1,8 @@
-package com.nhnacademy.day2.runner;
+package com.nhnacademy.day3.runner;
 
-import com.nhnacademy.day2.process.cook.ChefBean;
-import com.nhnacademy.day2.process.delivery.DeliveryServiceBean;
-import com.nhnacademy.day2.process.order.OrderProcessorBean;
+import com.nhnacademy.day3.process.cook.ChefBean;
+import com.nhnacademy.day3.process.delivery.DeliveryServiceBean;
+import com.nhnacademy.day3.process.order.OrderProcessorBean;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -25,6 +25,10 @@ public class AppStartupRunner implements ApplicationRunner {
     @Autowired  // 의존성 주입 3 (필드 주입)
     private DeliveryServiceBean deliveryServiceBean;
 
+//    @Autowired
+//    public void setDeliveryServiceBean(DeliveryServiceBean deliveryServiceBean) {
+//        this.deliveryServiceBean = deliveryServiceBean;
+//    }
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
