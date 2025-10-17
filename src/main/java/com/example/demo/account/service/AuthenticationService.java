@@ -24,7 +24,7 @@ public class AuthenticationService {
                 return currentAccount;
             }
         }
-        return null;
+        throw new IllegalArgumentException("id or password not correct");
     }
 
     public void logout() {

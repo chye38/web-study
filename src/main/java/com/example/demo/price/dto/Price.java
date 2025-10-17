@@ -15,4 +15,9 @@ public class Price {
     String sector;
     @JsonProperty("구간금액(원)")
     int unitPrice;
+
+    @Override
+    public String toString(){
+        return "Price(id=%d, city=%s, sector=%s, unitPrice=%d)".formatted(id, city, sector, unitPrice);
+    }
 }

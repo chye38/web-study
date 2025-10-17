@@ -6,10 +6,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Profile("eng")
-public class EnglishOutputFormatter {
+public class EnglishOutputFormatter implements OutPutFormatter{
 
     public String format(Price price, int usage) {
-        return null;
+        return "city: %s, sector: %s, unit price(won): %d, bill total(won): %d"
+                .formatted(
+                        price.getCity(),
+                        price.getSector(),
+                        price.getUnitPrice(),
+                        price.getUnitPrice() * usage
+                );
     }
 
 }
