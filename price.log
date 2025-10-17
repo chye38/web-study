@@ -62,3 +62,13 @@
 2024-08-01 16:08:59,474 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:41] <----- 선도형 class com.example.demo.shell.MyCommands.city([동두천시, 파주시, 광주시, 양주시, 단양군, 서산시, 논산시, 금산군, 정읍시, 나주시, 장흥군, 함평군, 완도군, 진도군, 청송군, 고령군, 예천군, 통영시, 사천시, 거제시, 고성군]) -----
 2024-08-01 16:08:59,476 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:37] ----- 선도형 class com.example.demo.shell.MyCommands.sector([동두천시]) ----->
 2024-08-01 16:08:59,478 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:41] <----- 선도형 class com.example.demo.shell.MyCommands.sector([가정용, 일반용, 일반용(미), 전용공업용, 발전용]) -----
+2025-10-17 23:34:09,751 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:53] ----- 선도형 class com.example.demo.shell.MyCommands.city[Ljava.lang.Object;@7bcecef6 ----->
+2025-10-17 23:34:09,761 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:64] <----- 선도형 class com.example.demo.shell.MyCommands.city[거제시, 고령군, 고성군, 광주시, 금산군, 나주시, 논산시, 단양군, 동두천시, 사천시, 서산시, 양주시, 예천군, 완도군, 장흥군, 정읍시, 진도군, 청송군, 통영시, 파주시, 함평군] -----
+2025-10-18 00:31:26,313 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:56] ----- 선도형 class com.example.demo.shell.MyCommands.city([]) ----->
+2025-10-18 00:31:26,316 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:67] <----- 선도형 class com.example.demo.shell.MyCommands.city([거제시, 고령군, 고성군, 광주시, 금산군, 나주시, 논산시, 단양군, 동두천시, 사천시, 서산시, 양주시, 예천군, 완도군, 장흥군, 정읍시, 진도군, 청송군, 통영시, 파주시, 함평군]) -----
+2025-10-18 00:32:04,603 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:56] ----- 선도형 class com.example.demo.shell.MyCommands.sector([고령군]) ----->
+2025-10-18 00:32:04,604 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:67] <----- 선도형 class com.example.demo.shell.MyCommands.sector([가정용, 공업용, 대중탕용, 일반용]) -----
+2025-10-18 00:32:15,093 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:56] ----- 선도형 class com.example.demo.shell.MyCommands.price([고령군, 가정용]) ----->
+2025-10-18 00:32:15,094 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:67] <----- 선도형 class com.example.demo.shell.MyCommands.price(Price(id=209, city=고령군, sector=가정용, unitPrice=435)) -----
+2025-10-18 00:32:26,026 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:56] ----- 선도형 class com.example.demo.shell.MyCommands.billTotal([고령군, 가정용, 10]) ----->
+2025-10-18 00:32:26,027 INFO [main] c.e.d.p.a.PriceAop [PriceAop.java:67] <----- 선도형 class com.example.demo.shell.MyCommands.billTotal(지자체명: 고령군, 업종: 가정용, 구간금액(원): 435, 총금액(원): 4350) -----

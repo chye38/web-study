@@ -3,6 +3,8 @@ package com.example.demo.price.aop;
 
 import com.example.demo.account.dto.Account;
 import com.example.demo.account.service.AuthenticationService;
+
+import java.util.Arrays;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,40 +25,46 @@ public class PriceAop {
     private final AuthenticationService authenticationService;
 
     @Pointcut("execution(* com.example.demo.shell.MyCommands.*(..)) &&" +
-            "!execution(* com.example.demo.shell.MyCommands.login()) &&" +
+            "!execution(* com.example.demo.shell.MyCommands.login(..)) &&" +
             "!execution(* com.example.demo.shell.MyCommands.logout()) &&" +
             "!execution(* com.example.demo.shell.MyCommands.currentUser())"
     )
     public void priceMethodCut() {}
 
-    @Before("priceMethodCut()")
-    public void loginRequiredMethod() {
-        Account account = authenticationService.getCurrentAccount();
-        if(Objects.isNull(account)){
-            throw new IllegalArgumentException("Login required");
-        }
-    }
+//    @Before("priceMethodCut()")
+//    public void loginRequiredMethod() {
+//        Account account = authenticationService.getCurrentAccount();
+//        if(Objects.isNull(account)){
+//            throw new IllegalArgumentException("Login required");
+//        }
+//    }
 
     @Around("priceMethodCut()")
     public Object aroundPriceMethod(ProceedingJoinPoint pjp) throws Throwable {
         Account account = authenticationService.getCurrentAccount();
+
+        if(Objects.isNull(account)){
+            throw new IllegalArgumentException("Login required");
+        }
+
         String fullMethodName = "%s.%s".formatted(
                 pjp.getSignature().getDeclaringTypeName(),
                 pjp.getSignature().getName()
         );
         // 사용자 입력 Args
-        log.info("----- %s class %s%s ----->"
+        String args = Arrays.toString(pjp.getArgs());
+        log.info("----- %s class %s(%s) ----->"
                 .formatted(
                         account.getName(),
                         fullMethodName,
-                        pjp.getArgs()
+                        args
                 )
         );
 
         Object object = pjp.proceed();
 
         // 서버 반환 값
-        log.info("<----- %s class %s%s -----"
+        log.info("<----- %s class %s(%s) -----"
                 .formatted(
                         account.getName(),
                         fullMethodName,
